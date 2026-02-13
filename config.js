@@ -5,7 +5,7 @@
 const CONFIG = {
     // Your Valentine's name that will appear in the title
     // Example: "Jade", "Sarah", "Mike"
-    valentineName: "Hi",
+    valentineName: "Kartik",
 
     // The title that appears in the browser tab
     // You can use emojis! 💝 💖 💗 💓 💞 💕
@@ -18,40 +18,57 @@ const CONFIG = {
         bears: ['🧸', '🐻']                       // Cute bear emojis
     },
 
-    // Questions and answers
-    // Customize each question and its possible responses
-    questions: {
-        first: {
-            text: "Do you like me?",                                    // First interaction
-            yesBtn: "Yes",                                             // Text for "Yes" button
-            noBtn: "No",                                               // Text for "No" button
-            secretAnswer: "I don't like you, I love you! ❤️"           // Secret hover message
+    // Multi-stage content
+    stages: {
+        stage1: {
+            emoji: "👋",
+            mainText: "Hi",
+            paragraph: "I've been thinking… and I decided to stop overthinking.",
+            button: "Okay, tell me"
         },
-        second: {
-            text: "How much do you love me?",                          // For the love meter
-            startText: "This much!",                                   // Text before the percentage
-            nextBtn: "Next ❤️"                                         // Text for the next button
+        stage2: {
+            mainText: "We've only met a few times.",
+            memories: [
+                "That walk in Nehru park 🌳",
+                "Coffee at Diggin ☕",
+                "You in that black dress 🖤",
+                "And that smile… 😊"
+            ],
+            smallText: "Every time, I've smiled a little more than usual.",
+            italicText: "So I built this instead of sending a boring text.",
+            button: "What is this about?"
         },
-        third: {
-            text: "Will you be my Valentine on February 14th, 2025? 🌹", // The big question!
-            yesBtn: "Yes!",                                             // Text for "Yes" button
-            noBtn: "No"                                                 // Text for "No" button
+        stage3: {
+            mainQuestion: "Will you be my Valentine?",
+            emoji: "💌",
+            yesBtn: "Yes 💖",
+            noBtn: "No",
+            noButtonTexts: [
+                "Are you sure?",
+                "Hmm… think again",
+                "Okay wow rude",
+                "This button is getting tired",
+                "I'm gonna disappear"
+            ]
+        },
+        stage4: {
+            mainText: "Wait… that was too easy.",
+            paragraph: "If you really mean yes, do one thing.",
+            button: "Press No (trust me) 😏"
+        },
+        stage5: {
+            firstLine: "Haha.",
+            paragraph1: "That was just to prove you're a good sport.",
+            mainQuestion: "Happy Valentine's Day 🌹",
+            paragraph2: "No tricks now. Just me asking you properly.",
+            button: "Yes, I'll be your Valentine 💕"
+        },
+        stage6: {
+            emoji: "🎉",
+            mainText: "I'm really glad I asked you.",
+            subtext: "Coffee / dessert is on me ❤️",
+            footer: "Built with nerves, hope, and a lot of overthinking."
         }
-    },
-
-    // Love meter messages
-    // They show up depending on how far they slide the meter
-    loveMessages: {
-        extreme: "WOOOOW You love me that much?? 🥰🚀💝",  // Shows when they go past 5000%
-        high: "To infinity and beyond! 🚀💝",              // Shows when they go past 1000%
-        normal: "And beyond! 🥰"                           // Shows when they go past 100%
-    },
-
-    // Messages that appear after they say "Yes!"
-    celebration: {
-        title: "Yay! I'm the luckiest person in the world! 🎉💝💖💝💓",
-        message: "Now come get your gift, a big warm hug and a huge kiss!",
-        emojis: "🎁💖🤗💝💋❤️💕"  // These will bounce around
     },
 
     // Color scheme for the website
